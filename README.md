@@ -2,6 +2,8 @@
 
 Skill para reconstruir el funcionamiento real de sistemas existentes: arquitectura, procesos, reglas, datos, integraciones y resultados respaldados por evidencia.
 
+[Explorar la web y el ejemplo interactivo](https://system-x-ray.heinergc.chatgpt.site). Disponible en español e inglés, con instalación por cliente y descarga ZIP. [Código de la página](web/README.md).
+
 Derivada del [documento original](System%20X-Ray.md), que se conserva como referencia. Las instrucciones del documento son material de diseño; no se ejecutan como una solicitud de analizar un sistema inexistente en esta carpeta.
 
 ## Uso

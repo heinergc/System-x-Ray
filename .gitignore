@@ -7,3 +7,4 @@ node_modules/
 !.env.example
 .xray-work/
 graphify-out/
+/website/
