@@ -1,0 +1,20 @@
+name: Validate skill
+on:
+  push:
+  pull_request:
+jobs:
+  helpers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m unittest discover -s tests -v
+      - run: python skills/system-x-ray/scripts/xray.py validate examples/graph.json
+      - run: python skills/system-x-ray/scripts/xray.py dot examples/graph.json --output architecture.dot
+      - name: Render synthetic diagram
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y graphviz
+          dot -Tsvg architecture.dot -o architecture.svg

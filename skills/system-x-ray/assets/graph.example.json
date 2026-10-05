@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "revision": "synthetic-example-v1",
+  "evidence": [
+    {"id": "EVIDENCIA-001", "path": "src/api.py", "symbol": "submit", "lines": [10, 20]},
+    {"id": "EVIDENCIA-002", "path": "src/repository.py", "symbol": "save", "lines": [5, 15]}
+  ],
+  "nodes": [
+    {"id": "api", "label": "API (ejemplo sintético)", "kind": "entrypoint"},
+    {"id": "repository", "label": "Repositorio", "kind": "component"},
+    {"id": "db", "label": "Datos", "kind": "database"}
+  ],
+  "edges": [
+    {"source": "api", "target": "repository", "relation": "llama", "status": "CONFIRMADO", "evidence": ["EVIDENCIA-001"]},
+    {"source": "repository", "target": "db", "relation": "persiste", "status": "INFERIDO", "evidence": ["EVIDENCIA-002"], "reason": "Hipótesis sintética para demostrar la leyenda; no es un hallazgo real."}
+  ]
+}

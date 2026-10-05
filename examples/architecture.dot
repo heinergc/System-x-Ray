@@ -1,0 +1,11 @@
+digraph SystemXRay {
+  rankdir=LR;
+  graph [bgcolor="white", label="System X-Ray | sólido: confirmado; discontinuo: inferido", labelloc=t];
+  node [shape=box, style="rounded,filled", fillcolor="#EFF6FF", fontname="Arial"];
+  edge [fontname="Arial", fontsize=10];
+  "api" [label="API (ejemplo sintético)"];
+  "repository" [label="Repositorio"];
+  "db" [label="Datos"];
+  "api" -> "repository" [label="llama | CONFIRMADO\nEVIDENCIA-001", style="solid"];
+  "repository" -> "db" [label="persiste | INFERIDO\nEVIDENCIA-002", style="dashed"];
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "System X-Ray"
+  short_description: "Arquitectura y flujos con evidencia del código"
+  default_prompt: "Usa $system-x-ray para explicar este sistema, reconstruir sus flujos y generar diagramas con evidencia."
+policy:
+  allow_implicit_invocation: true
