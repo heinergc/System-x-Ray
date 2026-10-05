@@ -27,6 +27,8 @@ Explica el funcionamiento real: actor → entrada → interfaz/evento → códig
 
 Lee [herramientas y MCP](references/herramientas-mcp.md) si necesitas recuperación semántica, grafos o renderizado. Usa las capacidades ya disponibles. MCP es una integración del cliente, no una capacidad inherente del modelo. Sin herramientas, trabaja con archivos proporcionados y declara los límites.
 
+Serena es externa y opcional: instalar esta skill no la instala ni activa. Si ya está conectada y soporta el proyecto, úsala después del inventario para navegar símbolos y referencias de los flujos seleccionados, verificando las implementaciones. Durante el análisis usa lectura; sus herramientas de edición no amplían la autorización del usuario. Sin Serena, continúa con lectura directa y búsquedas.
+
 Para gráficos, lee [diagramas](references/diagramas.md). Mermaid es la salida editable predeterminada. Para grafos de componentes con mejor exportación, `scripts/xray.py dot <grafo.json>` devuelve DOT validado por estructura y trazabilidad; Graphviz puede renderizarlo si está instalado. No uses imágenes generativas para representar relaciones técnicas exactas.
 
 El grafo de intercambio definido en [contrato del grafo](references/grafo.md) admite IDs de evidencia, estado por relación y origen. `scripts/xray.py validate <grafo.json>` verifica integridad, no veracidad semántica. Nunca conviertas un resultado de búsqueda o un grafo viejo en confirmación sin volver a la fuente.

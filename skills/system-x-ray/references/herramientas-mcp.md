@@ -13,6 +13,14 @@ Investigación: 2026-10-05. La configuración MCP depende del cliente y debe ada
 
 Recomendación inicial: lectura/rg + Mermaid; añadir Serena para navegación semántica y Graphify cuando el tamaño del sistema justifique un grafo persistente. Ningún MCP deduce por sí solo la arquitectura funcional con certeza.
 
+## Aclaración sobre Serena
+
+Serena es una herramienta externa y opcional; no está incluida, instalada ni activada al instalar System X-Ray. Debe configurarse por separado como MCP en el cliente de IA y requiere soporte del lenguaje y acceso al proyecto. System X-Ray funciona sin Serena mediante lectura directa y búsquedas.
+
+Si está disponible, puede utilizarse después del inventario para localizar símbolos, leer implementaciones y encontrar referencias durante la reconstrucción de flujos. Sus resultados ayudan a encontrar evidencia, pero no prueban por sí solos el comportamiento en ejecución ni identifican con certeza toda la arquitectura.
+
+Serena también ofrece herramientas de edición. Para un análisis de System X-Ray, utiliza las capacidades de lectura; cualquier modificación del sistema requiere una solicitud que la autorice. Esta mención no implica afiliación ni respaldo por parte del proyecto Serena.
+
 Configuración Graphify opcional en [mcpServers de ejemplo](../assets/mcp.graphify.example.json), basada en su comando oficial `python -m graphify.serve <graph.json>`. Requiere el paquete y el grafo existente; adapta rutas absolutas y ejecutable Python. Este ejemplo no instala ni habilita servidores automáticamente. No mezcles su grafo con el contrato propio de X-Ray sin conversión.
 
 Antes de añadir un MCP: verifica repositorio oficial, versión exacta, herramientas expuestas y permisos; configura únicamente el proyecto necesario. Para filesystem de solo lectura real puede usarse un volumen Docker `ro` según la documentación oficial. No envíes código privado a renderizadores públicos sin autorización. Usa renderizado local o un servicio propio.

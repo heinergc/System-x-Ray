@@ -39,6 +39,8 @@ Graphviz opcional: `dot -Tsvg arquitectura.dot -o arquitectura.svg`. Mermaid CLI
 
 ## MCP opcionales
 
+**Serena es una herramienta externa y opcional.** Instalar System X-Ray no la instala ni activa; requiere configuración MCP aparte y soporte del lenguaje del proyecto. Ayuda a localizar símbolos y referencias después del inventario. También incluye edición, por lo que para analizar se deben utilizar sus capacidades de lectura. Sus resultados deben verificarse contra el código. No existe afiliación ni respaldo implícito de Serena.
+
 [Investigación y elección de herramientas](skills/system-x-ray/references/herramientas-mcp.md): Serena para símbolos/referencias, Graphify para grafos persistentes. [Configuración de ejemplo](config/mcp.graphify.example.json); requiere adaptar rutas e instalar la dependencia en el entorno elegido. No se modifica la configuración global del cliente automáticamente.
 
 ## Diseño y validación
